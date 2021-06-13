@@ -1,11 +1,10 @@
 import React from 'react'
+import Header from './Header'
 
 export default function Home() {
     return (
         <div>
-            <nav>
-                <button>Order Here</button>
-            </nav>
+           <Header/> 
         </div>
     )
 }

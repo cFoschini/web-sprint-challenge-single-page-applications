@@ -1,22 +1,17 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from "./Home";
-import Form from "./Form";
+import React from "react";
+import Home from './Home';
+import Form from './Form';
+import { Route, Switch } from 'react-router-dom';
 
 const App = () => {
+
   return (
-    <Router>
-      <div>
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/pizza">
-            <Form />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+    <div>
+      <Switch>
+        <Route exact path="/" component={Home}/>
+        <Route path="/pizza" component={Form}/>
+      </Switch>
+    </div>
   );
 };
 export default App;
